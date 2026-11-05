@@ -1,0 +1,10 @@
+{
+  "positive_rate_train": 0.16753167510139622,
+  "chosen": "none",
+  "rule": "other strategy only if validation PR-AUC gain >= 0.005 over none",
+  "mean_val_pr_auc": {
+    "class_weight": 0.6962995104105993,
+    "none": 0.6985026050295129,
+    "smote": 0.6821385905843211
+  }
+}

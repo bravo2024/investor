@@ -1,0 +1,38 @@
+feature,auc_drop_mean,auc_drop_std,meaning
+days_since_last_buy,0.010723462396221439,0.0008897456168973451,"Days since the last BUY trade; if there is none, the days since 2018-01-02 (at least that long)."
+n_buy_all,0.008317907187774054,0.00043997139167242485,Number of BUY trades since 2018-01-03.
+share_branch_12m,0.007506561459133332,0.0008255929856815605,Share of the last 12 months' trades placed in a branch (the rest is phone banking).
+port_value_log,0.007115199642081693,0.00025390539029535513,"Log of 1 + estimated market value of holdings at T (net units times the last close, euros)."
+cap_predicted,0.007037337014930478,0.00026544100226293235,1 if the capacity band was estimated by an algorithm.
+n_buy_12m,0.00574436860502292,0.0006087172903623152,Number of BUY trades in the 12 months before T.
+hhi_held,0.004621939644320583,0.00030700030807241007,Concentration of the portfolio: sum of squared value shares of held assets (1 = a single asset).
+share_bond,0.003961463901460793,0.0003248335490637901,Share of portfolio value in bonds.
+risk_ord,0.003501147505669078,0.0005327347273589119,"Risk profile as 0 Conservative, 1 Income, 2 Balanced, 3 Aggressive; -1 if not available. Partly simulated (see predicted flag)."
+days_since_last_trade,0.003463154551816494,0.00029466971482154474,Days since the last BUY or SELL trade (same fill rule).
+questionnaire_done,0.002972651420953798,0.00026544333835004717,1 if a risk questionnaire was completed before T.
+n_sell_all,0.0028238683302129752,0.00033186681200032895,Number of SELL trades since 2018-01-03.
+seg_premium,0.0024671876091680867,0.0003608406976141009,1 if bank segment is Premium (over 60k EUR on investments); the reference group is Mass.
+share_stock,0.0024102448840767066,0.0002371644833508837,Share of portfolio value in stocks.
+days_since_last_sell,0.001493728561956842,0.0003960118371185689,Days since the last SELL trade (same fill rule).
+share_fund,0.001326630472731094,0.00028382434032935146,Share of portfolio value in mutual funds.
+net_flow_3m,0.0012304592160524042,0.00010845543011021648,"Signed log of (bought minus sold, euros) in the last 3 months."
+has_trade_event,0.0008888877849364096,0.0002849651820636841,"1 if the customer has made any trade since 2018-01-03, else 0 (opening book only)."
+active_months_12m,0.0008196784479005626,0.00015917168043614064,Number of distinct calendar months with at least one trade in the last 12 months.
+holding_days_mean,0.0006789075055637194,0.0003966912621225325,Average days since the first buy of each asset currently held (the opening book counts from 2018-01-02).
+n_buy_3m,0.0004266139962383786,2.600634986946579e-05,Number of BUY trades in the 3 months before T (opening positions excluded).
+n_categories_held,0.0002357172362097648,5.639015852942592e-05,"Number of asset categories (stock, bond, fund) currently held, 0 to 3."
+held_ret_3m,0.0002222872280474686,0.00012155949675540566,"Value-weighted 3-month price return of the assets the customer holds, up to T."
+tenure_days,0.0001827168957465819,0.00013924253579229766,Days from the customer's first record in the data (2018-01-02 for the opening book) to the cut-off T. Left-censored at 2018-01-02.
+held_ret_1m,0.00013756735676671017,0.00010700843579045892,"Value-weighted 1-month price return of the assets the customer holds, up to T."
+cap_ord,0.00012767636593076227,0.00012722272741027405,"Investment capacity band: 0 under 30k, 1 30-80k, 2 80-300k, 3 over 300k EUR; -1 if not available. Partly estimated."
+buy_count_trend,0.0001167599729541946,5.241009610462374e-05,BUY count of the last 3 months minus BUY count of months 4 to 6.
+net_flow_prev3m,0.00011401070634491362,4.481970901554923e-05,"Signed log of (bought minus sold, euros) in months 4 to 6 before T."
+n_sell_3m,6.141161019761477e-05,6.326354362560676e-05,Number of SELL trades in the 3 months before T.
+seg_professional,5.561798195306e-05,5.6445361608190534e-05,1 if bank segment is Professional (sole proprietor).
+seg_other,4.49287484569183e-05,8.300044799894588e-05,1 if bank segment is Legal entity or Inactive.
+cap_missing,2.43081873958495e-06,4.382211161125226e-05,1 if no capacity band is available.
+net_flow_trend,-8.882572581381254e-06,5.727626926325889e-05,Net flow of the last 3 months minus net flow of the 3 months before that (positive = more buying lately).
+n_sell_12m,-3.210803721862554e-05,9.886621354715911e-05,Number of SELL trades in the 12 months before T.
+share_internet_12m,-8.788736609228742e-05,0.00017513753779718394,Share of the last 12 months' trades placed through internet banking.
+n_assets_held,-9.207601707306168e-05,0.00015251221151438787,Number of assets with a positive net position at T (buys minus sells in units).
+n_assets_ever,-0.00019557582072862178,0.00014053216233087982,Number of different assets the customer has ever traded or held in the data.

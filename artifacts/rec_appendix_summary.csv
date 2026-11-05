@@ -1,0 +1,6 @@
+protocol,model,hit_at_10,ndcg_at_10,buyers_evaluated,paper_reference_ndcg_at_10
+A: repeat purchases allowed,Gradient-boosting pair ranker,0.7123333333333334,0.4739695537861328,3000,
+A: repeat purchases allowed,Personal history + popularity,0.7120000000000001,0.460858088171745,3000,
+A: repeat purchases allowed,Popularity (3 months),0.5893333333333334,0.258248698745814,3000,0.271
+B: new assets only,Gradient-boosting pair ranker,0.3619243854845949,0.172805760881679,1818,
+B: new assets only,Popularity (3 months),0.3568370644286875,0.1500197440709076,1818,0.271

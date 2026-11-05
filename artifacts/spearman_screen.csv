@@ -1,0 +1,11 @@
+pair,abs_spearman,dropped,kept
+hhi_held ~ top1_share,0.999,top1_share,hhi_held
+n_buy_12m ~ distinct_assets_bought_12m,0.998,distinct_assets_bought_12m,n_buy_12m
+n_buy_3m ~ buy_val_3m,0.997,buy_val_3m,n_buy_3m
+buy_val_12m ~ avg_buy_val_12m,0.996,avg_buy_val_12m,buy_val_12m
+risk_missing ~ cap_missing,0.996,risk_missing,cap_missing
+n_buy_12m ~ buy_val_12m,0.992,buy_val_12m,n_buy_12m
+n_sell_12m ~ sell_val_12m,0.992,sell_val_12m,n_sell_12m
+risk_predicted ~ cap_predicted,0.982,risk_predicted,cap_predicted
+questionnaire_done ~ days_since_questionnaire,0.959,days_since_questionnaire,questionnaire_done
+n_buy_6m ~ n_buy_12m,0.913,n_buy_6m,n_buy_12m

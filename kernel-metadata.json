@@ -1,0 +1,16 @@
+{
+  "id": "vivekkopthsd/far-trans-wealth-uptake",
+  "title": "FAR Trans Wealth Uptake",
+  "code_file": "run_far_trans.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "keywords": [],
+  "dataset_sources": [],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": []
+}

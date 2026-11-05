@@ -1,0 +1,15 @@
+# Everything needed to re-run FARTransWealth.ipynb, regenerate README.md and run the tests.
+#   pip install -r requirements-dev.txt
+# The app itself only needs requirements.txt.
+-r requirements.txt
+
+# Notebook execution and analysis
+matplotlib==3.11.1
+shap==0.51.0
+nbformat
+nbclient
+nbconvert
+ipykernel
+
+# Tests
+pytest

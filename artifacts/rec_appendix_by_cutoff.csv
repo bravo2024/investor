@@ -1,0 +1,16 @@
+protocol,cutoff,model,hit_at_10,ndcg_at_10,buyers_evaluated
+A: repeat purchases allowed,2021-12-01,Popularity (3 months),0.553,0.2095540231476676,1000
+B: new assets only,2021-12-01,Popularity (3 months),0.37727272727272726,0.12969341675518575,660
+A: repeat purchases allowed,2021-12-01,Personal history + popularity,0.684,0.42951250214985187,1000
+A: repeat purchases allowed,2021-12-01,Gradient-boosting pair ranker,0.678,0.44064697465788844,1000
+B: new assets only,2021-12-01,Gradient-boosting pair ranker,0.3787878787878788,0.16126735796167863,660
+A: repeat purchases allowed,2022-03-01,Popularity (3 months),0.642,0.28147103740302,1000
+B: new assets only,2022-03-01,Popularity (3 months),0.3787085514834206,0.1648439810304004,573
+A: repeat purchases allowed,2022-03-01,Personal history + popularity,0.746,0.4967307482690038,1000
+A: repeat purchases allowed,2022-03-01,Gradient-boosting pair ranker,0.748,0.511708663313587,1000
+B: new assets only,2022-03-01,Gradient-boosting pair ranker,0.38219895287958117,0.19560185170616282,573
+A: repeat purchases allowed,2022-06-01,Popularity (3 months),0.573,0.2837210356867545,1000
+B: new assets only,2022-06-01,Popularity (3 months),0.3145299145299145,0.15552183442713668,585
+A: repeat purchases allowed,2022-06-01,Personal history + popularity,0.706,0.4563310140963793,1000
+A: repeat purchases allowed,2022-06-01,Gradient-boosting pair ranker,0.711,0.469553023386923,1000
+B: new assets only,2022-06-01,Gradient-boosting pair ranker,0.3247863247863248,0.1615480729771956,585

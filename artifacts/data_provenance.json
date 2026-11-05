@@ -1,0 +1,162 @@
+{
+  "dataset": "FAR-Trans: An Investment Dataset for Financial Asset Recommendation",
+  "source_url": "https://researchdata.gla.ac.uk/id/eprint/1658",
+  "download_url": "https://researchdata.gla.ac.uk/1658/1/FAR-Trans.zip",
+  "paper": "Sanz-Cruzado, Droukas, McCreadie. IJCAI-2024 FinRec workshop. arXiv 2407.08692",
+  "licence": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)",
+  "zip_sha256": "d0d6cfe027732bab45fdcf9af80eff4fefddc789aedae9bdce0d3d6cfd05cfb6",
+  "zip_bytes": 9800079,
+  "files": {
+    "asset_information.csv": {
+      "bytes": 83851,
+      "sha256": "33f9897b14087068fba53a0bc9e24a0031b096bd3ad3e977e534153f29b7a590",
+      "rows": 836,
+      "columns": [
+        "ISIN",
+        "assetName",
+        "assetShortName",
+        "assetCategory",
+        "assetSubCategory",
+        "marketID",
+        "sector",
+        "industry",
+        "timestamp"
+      ]
+    },
+    "close_prices.csv": {
+      "bytes": 22668996,
+      "sha256": "6ba1fe8390b31dfb3ab4e3e824910f9e8da4684cb6074cdb82eb6422a323656d",
+      "rows": 703303,
+      "columns": [
+        "ISIN",
+        "timestamp",
+        "closePrice"
+      ]
+    },
+    "customer_information.csv": {
+      "bytes": 2408798,
+      "sha256": "c4ad52ebca90e32bf3df5eb64f362b7a3437b77d978b22627cc46927fe7064af",
+      "rows": 32468,
+      "columns": [
+        "customerID",
+        "customerType",
+        "riskLevel",
+        "investmentCapacity",
+        "lastQuestionnaireDate",
+        "timestamp"
+      ]
+    },
+    "limit_prices.csv": {
+      "bytes": 56622,
+      "sha256": "b5a9bc304e2a4a31f5e3d0959b22c5c6135b69f13ce6f92123fc7e1e92600c8f",
+      "rows": 807,
+      "columns": [
+        "ISIN",
+        "minDate",
+        "maxDate",
+        "priceMinDate",
+        "priceMaxDate",
+        "roi_over_full_period (source column name omitted in this listing)"
+      ]
+    },
+    "markets.csv": {
+      "bytes": 11771,
+      "sha256": "009d5764b5eb59e979d8c22954482cf7bb8ed5fdb3382a6fb03f3c6cd1316960",
+      "rows": 38,
+      "columns": [
+        "exchangeID",
+        "marketID",
+        "name",
+        "description",
+        "country",
+        "tradingDays",
+        "tradingHours",
+        "marketClass"
+      ]
+    },
+    "questionnaires.csv": {
+      "bytes": 7216,
+      "sha256": "f4a902f7ac344f70708433a40d33163972da1652d6f91a42e3e280b17eedcea0",
+      "rows": 175,
+      "columns": [
+        "Demographics"
+      ]
+    },
+    "README.txt": {
+      "bytes": 7135,
+      "sha256": "5aa20b492c9fe18c8b5a147ad13fae99862c78aea59cbf542b734b5eef9ea072"
+    },
+    "transactions.csv": {
+      "bytes": 35651778,
+      "sha256": "358871fa1311a802799df86e56c3d633513566965b01412d058e0f8fbe6cd54b",
+      "rows": 388048,
+      "columns": [
+        "customerID",
+        "ISIN",
+        "transactionID",
+        "transactionType",
+        "timestamp",
+        "totalValue",
+        "units",
+        "channel",
+        "marketID"
+      ]
+    }
+  },
+  "counts": {
+    "customers_with_transactions": 29090,
+    "customers_in_customer_information": 29090,
+    "assets_in_asset_information": 806,
+    "assets_traded": 320,
+    "transactions": 388048,
+    "buys": 228913,
+    "sells": 159135,
+    "price_points": 703303,
+    "markets": 38,
+    "first_transaction_date": "2018-01-02",
+    "last_transaction_date": "2022-11-30",
+    "first_price_date": "2018-01-01",
+    "last_price_date": "2022-11-29"
+  },
+  "paper_reported": {
+    "customers": 29090,
+    "assets": 806,
+    "transactions": 388049,
+    "buys": 228913,
+    "sells": 159136,
+    "price_points": 703303,
+    "risk_profiles_simulated": 7141,
+    "capacity_estimated": 7318
+  },
+  "simulated_or_estimated": {
+    "risk_level": {
+      "predicted_values": 7141,
+      "paper_count": 7141,
+      "marker": "riskLevel starts with 'Predicted_'",
+      "readme_quote": "Predicted_Conservative / Predicted_Income / Predicted_Balanced / Predicted_Aggressive: Same as earlier, but predicted by an algorithm.",
+      "paper_quote": "In case they have not, the score is simulated through an automated process ... A risk profile is estimated following this method for 7,141 investors in our dataset."
+    },
+    "investment_capacity": {
+      "predicted_values": 7318,
+      "paper_count": 7318,
+      "marker": "investmentCapacity starts with 'Predicted_'",
+      "paper_quote": "A similar procedure to the one used for risk profile is used for those customers without assessment ... (in this case, this is estimated for 7,318 customers)"
+    },
+    "customer_type": "bank-assigned segment; not described as simulated",
+    "static_attributes_note": "segment, risk and capacity never differ between a customer's records, so only one value exists per customer"
+  },
+  "gate": {
+    "supports_customer_level_time_split_task": true,
+    "reasons": [
+      "dated Buy/Sell transactions with customer ids over 59 months",
+      "29,090 customers, 228,913 buys",
+      "customer segment, risk profile and investment capacity attributes",
+      "daily close prices for all assets"
+    ],
+    "limits": [
+      "the first day of data (2018-01-02) holds about 9% of all rows: opening positions, not trading activity",
+      "trading volume is thin before mid 2019, so snapshots start in October 2019"
+    ]
+  },
+  "dataset_files_untouched": true
+}

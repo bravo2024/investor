@@ -1,0 +1,16 @@
+{
+  "features_before_screen": 47,
+  "after_spearman_screen": 37,
+  "vif_threshold": 10,
+  "features_dropped_for_lr": [
+    "net_flow_trend",
+    "share_stock",
+    "days_since_last_trade",
+    "n_buy_12m"
+  ],
+  "features_in_lr": 33,
+  "max_vif_before": 76.81111993859855,
+  "max_vif_after": 9.245525341269717,
+  "n_vif_gt10_before": 12,
+  "n_vif_gt10_after": 0
+}

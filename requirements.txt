@@ -1,0 +1,25 @@
+# Runtime requirements for app.py. Streamlit Community Cloud installs this file.
+#
+# Pinned to the environment that produced artifacts/ (Python 3.13.18,
+# see artifacts/run_summary.json["versions"]), with one exception: XGBoost is
+# pinned to 3.2.0 rather than 3.4.1 because 3.2.0 is the newest release that
+# still supports Python 3.11. The model is stored as JSON
+# (artifacts/models/xgb.json) and tests/test_artifacts.py verifies that the
+# frozen models reproduce the stored scores with these pins.
+#
+# xgboost-cpu, not xgboost: the PyPI "xgboost" wheel declares
+# nvidia-nccl-cu12 on Linux, so Streamlit Cloud downloads ~300 MB of NVIDIA
+# CUDA libraries for a model that only ever runs on CPU. xgboost-cpu is the
+# same project, same import name (import xgboost), no CUDA dependency.
+#
+# Python 3.11, 3.12 or 3.13 all work. Do not use 3.14: scikit-learn 1.6.1 and
+# numpy 2.1.3 publish no cp314 wheels. On Streamlit Community Cloud set the
+# version in "Advanced settings"; runtime.txt is not read there.
+numpy==2.1.3
+pandas==2.3.3
+scikit-learn==1.6.1
+xgboost-cpu==3.2.0
+lightgbm==4.6.0
+joblib==1.5.3
+streamlit==1.53.1
+altair==6.0.0

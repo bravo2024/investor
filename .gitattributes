@@ -1,0 +1,10 @@
+# Normalise line endings so CI (Linux) and Windows checkouts agree.
+* text=auto eol=lf
+
+# Binary artefacts
+*.png binary
+*.gz binary
+*.joblib binary
+
+# Notebooks are JSON text, but keep them unmodified
+*.ipynb text eol=lf

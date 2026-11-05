@@ -1,0 +1,48 @@
+feature,group,description,static_customer_attribute,used_by_tree_models,used_by_logistic_regression
+n_buy_3m,frequency,Number of BUY trades in the 3 months before T (opening positions excluded).,False,True,True
+n_buy_6m,frequency,Number of BUY trades in the 6 months before T.,False,False,False
+n_buy_12m,frequency,Number of BUY trades in the 12 months before T.,False,True,False
+n_buy_all,frequency,Number of BUY trades since 2018-01-03.,False,True,True
+n_sell_3m,frequency,Number of SELL trades in the 3 months before T.,False,True,True
+n_sell_12m,frequency,Number of SELL trades in the 12 months before T.,False,True,True
+n_sell_all,frequency,Number of SELL trades since 2018-01-03.,False,True,True
+buy_val_3m,monetary,Log of 1 + euro value bought in the last 3 months.,False,False,False
+buy_val_12m,monetary,Log of 1 + euro value bought in the last 12 months.,False,False,False
+sell_val_12m,monetary,Log of 1 + euro value sold in the last 12 months.,False,False,False
+avg_buy_val_12m,monetary,Log of 1 + the average euro size of a BUY in the last 12 months (0 if none).,False,False,False
+net_flow_3m,trend,"Signed log of (bought minus sold, euros) in the last 3 months.",False,True,True
+net_flow_prev3m,trend,"Signed log of (bought minus sold, euros) in months 4 to 6 before T.",False,True,True
+net_flow_trend,trend,Net flow of the last 3 months minus net flow of the 3 months before that (positive = more buying lately).,False,True,False
+buy_count_trend,trend,BUY count of the last 3 months minus BUY count of months 4 to 6.,False,True,True
+days_since_last_buy,recency,"Days since the last BUY trade; if there is none, the days since 2018-01-02 (at least that long).",False,True,True
+days_since_last_sell,recency,Days since the last SELL trade (same fill rule).,False,True,True
+days_since_last_trade,recency,Days since the last BUY or SELL trade (same fill rule).,False,True,False
+has_trade_event,recency,"1 if the customer has made any trade since 2018-01-03, else 0 (opening book only).",False,True,True
+active_months_12m,frequency,Number of distinct calendar months with at least one trade in the last 12 months.,False,True,True
+distinct_assets_bought_12m,diversity,Number of different assets bought in the last 12 months.,False,False,False
+share_internet_12m,channel,Share of the last 12 months' trades placed through internet banking.,False,True,True
+share_branch_12m,channel,Share of the last 12 months' trades placed in a branch (the rest is phone banking).,False,True,True
+n_assets_held,holdings,Number of assets with a positive net position at T (buys minus sells in units).,False,True,True
+n_assets_ever,holdings,Number of different assets the customer has ever traded or held in the data.,False,True,True
+n_categories_held,holdings,"Number of asset categories (stock, bond, fund) currently held, 0 to 3.",False,True,True
+port_value_log,holdings,"Log of 1 + estimated market value of holdings at T (net units times the last close, euros).",False,True,True
+hhi_held,concentration,Concentration of the portfolio: sum of squared value shares of held assets (1 = a single asset).,False,True,True
+top1_share,concentration,Value share of the largest holding.,False,False,False
+share_stock,holdings,Share of portfolio value in stocks.,False,True,False
+share_bond,holdings,Share of portfolio value in bonds.,False,True,True
+share_fund,holdings,Share of portfolio value in mutual funds.,False,True,True
+holding_days_mean,holdings,Average days since the first buy of each asset currently held (the opening book counts from 2018-01-02).,False,True,True
+held_ret_3m,market context,"Value-weighted 3-month price return of the assets the customer holds, up to T.",False,True,True
+held_ret_1m,market context,"Value-weighted 1-month price return of the assets the customer holds, up to T.",False,True,True
+tenure_days,tenure,Days from the customer's first record in the data (2018-01-02 for the opening book) to the cut-off T. Left-censored at 2018-01-02.,False,True,True
+seg_premium,segment,1 if bank segment is Premium (over 60k EUR on investments); the reference group is Mass.,True,True,True
+seg_professional,segment,1 if bank segment is Professional (sole proprietor).,True,True,True
+seg_other,segment,1 if bank segment is Legal entity or Inactive.,True,True,True
+risk_ord,risk profile,"Risk profile as 0 Conservative, 1 Income, 2 Balanced, 3 Aggressive; -1 if not available. Partly simulated (see predicted flag).",True,True,True
+risk_missing,risk profile,1 if no risk profile is available.,True,False,False
+risk_predicted,risk profile,1 if the risk profile was predicted by an algorithm rather than taken from the questionnaire.,True,False,False
+cap_ord,capacity,"Investment capacity band: 0 under 30k, 1 30-80k, 2 80-300k, 3 over 300k EUR; -1 if not available. Partly estimated.",True,True,True
+cap_missing,capacity,1 if no capacity band is available.,True,True,True
+cap_predicted,capacity,1 if the capacity band was estimated by an algorithm.,True,True,True
+questionnaire_done,questionnaire,1 if a risk questionnaire was completed before T.,True,True,True
+days_since_questionnaire,questionnaire,Days from the last questionnaire to T (0 if none before T).,True,False,False

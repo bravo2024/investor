@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Secrets
+.env
+.env.*
+
+# Tool caches
+.pytest_cache/
+.ipynb_checkpoints/
+.mypy_cache/
+.ruff_cache/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Raw data: FAR-Trans.zip is downloaded by the notebook (~9.8 MB zip, ~90 MB unzipped).
+# Not needed to run the app or the tests; see "How to run" in README.md.
+data/
+
+# Duplicate copy of artifacts/ + executed notebook pulled back from the Kaggle kernel.
+# The canonical copies live at the repository root.
+kaggle/pull_v2/
+
+# Local backups and scratch files
+*_bak/
+*_bak_*/
+*.bak

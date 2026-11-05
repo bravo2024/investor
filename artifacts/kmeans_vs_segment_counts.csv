@@ -1,0 +1,6 @@
+cluster,Legal entity / Inactive,Mass,Premium,Professional
+"cluster 0: dormant, larger portfolio, lower risk",387,28558,9734,1603
+"cluster 1: active, larger portfolio, higher risk",28,2946,3701,465
+"cluster 2: active, larger portfolio, higher risk",135,14849,12652,1933
+"cluster 3: dormant, smaller portfolio, lower risk",1038,69145,13263,3258
+"cluster 4: dormant, larger portfolio, higher risk",133,12238,19698,1749

@@ -1,0 +1,51 @@
+{
+  "runtime_seconds": 4772,
+  "smoke": false,
+  "versions": {
+    "python": "3.13.18",
+    "scikit-learn": "1.6.1",
+    "xgboost": "3.4.1",
+    "lightgbm": "4.6.0",
+    "numpy": "2.1.3",
+    "pandas": "2.3.3"
+  },
+  "strategy": "none",
+  "panel": {
+    "rows": 798812,
+    "snapshots": 33,
+    "features_total": 47,
+    "features_tree": 37,
+    "features_lr": 33
+  },
+  "best_single": "lgbm",
+  "best_ensemble": "e3",
+  "headline_model": "lgbm",
+  "n_boot": 1000,
+  "n_test_rows": 197513,
+  "n_test_customers": 28568,
+  "test_positive_rate": 0.1357024600912345,
+  "shap_source": "shap.TreeExplainer",
+  "kmeans_k": 5,
+  "test_roc_auc": {
+    "lr": 0.9064327378110001,
+    "dt": 0.8689699356871337,
+    "rf": 0.9125394206738168,
+    "gb": 0.9145918337732948,
+    "xgb": 0.915741140816964,
+    "lgbm": 0.9147855639067469,
+    "e1": 0.9144406651723542,
+    "e2": 0.9147218366763619,
+    "e3": 0.9154362643520296
+  },
+  "test_capture_20": {
+    "lr": 0.7270081707271574,
+    "dt": 0.6709696675745253,
+    "rf": 0.7419318732977652,
+    "gb": 0.7413722344513674,
+    "xgb": 0.7418572547849122,
+    "lgbm": 0.7434615528112525,
+    "e1": 0.7429392232212813,
+    "e2": 0.7423422751184569,
+    "e3": 0.743498862067679
+  }
+}

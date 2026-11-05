@@ -1,0 +1,34 @@
+feature,coef_per_sd,odds_ratio_per_sd,meaning
+port_value_log,0.7786745596096388,2.1785827693974973,"Log of 1 + estimated market value of holdings at T (net units times the last close, euros)."
+days_since_last_buy,-0.7348148660807726,0.4795942399177334,"Days since the last BUY trade; if there is none, the days since 2018-01-02 (at least that long)."
+share_fund,-0.6439654315903944,0.525205622276714,Share of portfolio value in mutual funds.
+cap_predicted,-0.5095883797904385,0.6007428058065803,1 if the capacity band was estimated by an algorithm.
+risk_ord,0.4502458890282818,1.568697863664574,"Risk profile as 0 Conservative, 1 Income, 2 Balanced, 3 Aggressive; -1 if not available. Partly simulated (see predicted flag)."
+hhi_held,-0.35751968271406454,0.6994089325412162,Concentration of the portfolio: sum of squared value shares of held assets (1 = a single asset).
+share_branch_12m,-0.3536403030391809,0.702127475058431,Share of the last 12 months' trades placed in a branch (the rest is phone banking).
+days_since_last_sell,-0.2551641038704922,0.7747893415981683,Days since the last SELL trade (same fill rule).
+questionnaire_done,0.18594554116934167,1.2043566707356945,1 if a risk questionnaire was completed before T.
+n_buy_all,0.17794874038642397,1.194764076520247,Number of BUY trades since 2018-01-03.
+n_buy_3m,0.15903077578456093,1.1723740268559923,Number of BUY trades in the 3 months before T (opening positions excluded).
+holding_days_mean,0.15211915812109825,1.1642989638436276,Average days since the first buy of each asset currently held (the opening book counts from 2018-01-02).
+active_months_12m,0.13192887589169894,1.1410271618417112,Number of distinct calendar months with at least one trade in the last 12 months.
+seg_premium,0.13018225847618806,1.1390359633664426,1 if bank segment is Premium (over 60k EUR on investments); the reference group is Mass.
+has_trade_event,-0.12455382913057889,0.8828907348465911,"1 if the customer has made any trade since 2018-01-03, else 0 (opening book only)."
+n_categories_held,0.10657029160126646,1.1124561200194913,"Number of asset categories (stock, bond, fund) currently held, 0 to 3."
+net_flow_3m,-0.10571238083380768,0.8996833770491787,"Signed log of (bought minus sold, euros) in the last 3 months."
+n_sell_all,-0.09748606891460511,0.9071149785640072,Number of SELL trades since 2018-01-03.
+tenure_days,-0.08442864454111512,0.9190372313605777,Days from the customer's first record in the data (2018-01-02 for the opening book) to the cut-off T. Left-censored at 2018-01-02.
+cap_missing,-0.08024979314507052,0.9228857870484758,1 if no capacity band is available.
+share_internet_12m,-0.07296988068997778,0.9296288293830477,Share of the last 12 months' trades placed through internet banking.
+n_sell_3m,0.07197762234641024,1.0746312960678657,Number of SELL trades in the 3 months before T.
+seg_other,-0.06776472081001451,0.9344803114853006,1 if bank segment is Legal entity or Inactive.
+held_ret_1m,-0.06409846776912291,0.9379126408182523,"Value-weighted 1-month price return of the assets the customer holds, up to T."
+net_flow_prev3m,-0.056198500506149905,0.9453514645203847,"Signed log of (bought minus sold, euros) in months 4 to 6 before T."
+held_ret_3m,0.0362126885171164,1.0368763547346285,"Value-weighted 3-month price return of the assets the customer holds, up to T."
+seg_professional,0.03610712633697667,1.0367669055830344,1 if bank segment is Professional (sole proprietor).
+n_assets_ever,0.030658930832793134,1.03113375597332,Number of different assets the customer has ever traded or held in the data.
+cap_ord,-0.015606820556951354,0.9845143347650017,"Investment capacity band: 0 under 30k, 1 30-80k, 2 80-300k, 3 over 300k EUR; -1 if not available. Partly estimated."
+buy_count_trend,0.014005396446761865,1.0141039314816034,BUY count of the last 3 months minus BUY count of months 4 to 6.
+share_bond,-0.006819155359520523,0.9932040423209085,Share of portfolio value in bonds.
+n_assets_held,0.0,1.0,Number of assets with a positive net position at T (buys minus sells in units).
+n_sell_12m,0.0,1.0,Number of SELL trades in the 12 months before T.

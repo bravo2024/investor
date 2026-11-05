@@ -1,0 +1,26 @@
+{
+  "train": {
+    "rows": 278610,
+    "customers": 22708,
+    "positives": 46676,
+    "positive_rate": 0.16753167510139622,
+    "first_cutoff": "2019-10-01",
+    "last_cutoff": "2020-10-01"
+  },
+  "valid": {
+    "rows": 74959,
+    "customers": 25126,
+    "positives": 14294,
+    "positive_rate": 0.19069091103136382,
+    "first_cutoff": "2021-04-01",
+    "last_cutoff": "2021-06-01"
+  },
+  "test": {
+    "rows": 197513,
+    "customers": 28568,
+    "positives": 26803,
+    "positive_rate": 0.1357024600912345,
+    "first_cutoff": "2021-12-01",
+    "last_cutoff": "2022-06-01"
+  }
+}
